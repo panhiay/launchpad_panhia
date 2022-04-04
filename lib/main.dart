@@ -49,8 +49,6 @@ class MyStatelessWidget extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
-
-          )
         ]
 
       ),
