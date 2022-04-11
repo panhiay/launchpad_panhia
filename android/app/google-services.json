@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "203421961542",
+    "project_id": "launchpad-patest",
+    "storage_bucket": "launchpad-patest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:203421961542:android:422eb826ece5ea3755a947",
+        "android_client_info": {
+          "package_name": "com.example.launchpad_tv_panhia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "203421961542-udsmfgmeoke6c963aqr76mbjfm2bum68.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhzCSRviBrrjYMqyPD9JvcAq08uEq2FCA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "203421961542-udsmfgmeoke6c963aqr76mbjfm2bum68.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
