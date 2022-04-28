@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:launchpad_tv_panhia/Pages/CompanyPage.dart';
-import 'package:launchpad_tv_panhia/colors/colors.dart';
+import 'package:launchpad_tv_panhia/app/colors/colors.dart';
 import 'package:launchpad_tv_panhia/services/share_preferences_services.dart';
 import '../LoginFlow/routes.dart';
 

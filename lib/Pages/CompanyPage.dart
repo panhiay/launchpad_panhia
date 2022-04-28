@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:launchpad_tv_panhia/app/data/company_Data.dart';
+
 
 class CompanyPage extends StatefulWidget {
   const CompanyPage({Key? key}) : super(key: key);
@@ -81,12 +83,13 @@ class topBar extends StatelessWidget {
 }
 
 class searchBar extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Expanded(child: Padding(
-            padding: EdgeInsets.only(top: 30, left: 20, right: 5),
+            padding: const EdgeInsets.only(top: 30, left: 20, right: 5),
             child: Container(
               height: 30,
               width: 500,
@@ -98,25 +101,23 @@ class searchBar extends StatelessWidget {
                   FittedBox(
                     child: IconButton(
                         onPressed: (){},
+                      tooltip: "Search Menu",
                         icon: const Icon(Icons.filter_list, size: 24),
-                    highlightColor: Colors.grey,)
+                    highlightColor: Colors.grey,splashColor: Colors.grey,)
                   ),
 
                   const Expanded(
                       child: TextField(
                         decoration: InputDecoration.collapsed(
                             hintText: 'Search',
-
                       ),
-                    )
+                    ),
                   )
                 ],
               )
             ),
         ),
         ),
-
-
         Padding(
           padding: const EdgeInsets.only(top: 30, left:5, right:5.0),
                   child: Container(
@@ -124,7 +125,7 @@ class searchBar extends StatelessWidget {
                     width: 30,
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.black),
-                      color: Colors.transparent
+
                     ),
                       child: FittedBox(
                         child: IconButton(
@@ -142,7 +143,6 @@ class searchBar extends StatelessWidget {
               width: 30,
               decoration: BoxDecoration(
                   border: Border.all(color: Colors.black),
-                  color: Colors.transparent
               ),
               child: FittedBox(
                   child: IconButton(
@@ -162,11 +162,63 @@ class searchBar extends StatelessWidget {
 }
 
 class listTable extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("content here")
+
+    var _allCompanies = [
+      ["Company A", 0, 0, 0, "Caesar", "Active","04/27/2022", "11868 Idalia Street", "Commerce City", "CO", "80022", "Edit"],
+      ["Company B", " ", 0, 0, 0, "Caesar", "Active","04/27/2022", "11868 Idalia Street", "Commerce City", "CO", "80022", "Edit"],
+      ["Company C", " ", 0, 0, 0, "Caesar", "Active","04/27/2022", "11868 Idalia Street", "Commerce City", "CO", "80022", "Edit"],
+      ["Company D", " ", 0, 0, 0, "Caesar", "Active","04/27/2022", "11868 Idalia Street", "Commerce City", "CO", "80022", "Edit"],
+      ["Company E", " ", 0, 0, 0, "Caesar", "Active","04/27/2022", "11868 Idalia Street", "Commerce City", "CO", "80022", "Edit"],
+      ["Company F", " ", 0, 0, 0, "Caesar", "Active","04/27/2022", "11868 Idalia Street", "Commerce City", "CO", "80022", "Edit"],
+    ];
+
+    var _allCompaniesSearch = [
+      ["Company A", 0, 0, 0, "Caesar", "Active","04/27/2022", "11868 Idalia Street", "Commerce City", "CO", "80022", "Edit"],
+      ["Company B", " ", 0, 0, 0, "Caesar", "Active","04/27/2022", "11868 Idalia Street", "Commerce City", "CO", "80022", "Edit"],
+      ["Company C", " ", 0, 0, 0, "Caesar", "Active","04/27/2022", "11868 Idalia Street", "Commerce City", "CO", "80022", "Edit"],
+      ["Company D", " ", 0, 0, 0, "Caesar", "Active","04/27/2022", "11868 Idalia Street", "Commerce City", "CO", "80022", "Edit"],
+      ["Company E", " ", 0, 0, 0, "Caesar", "Active","04/27/2022", "11868 Idalia Street", "Commerce City", "CO", "80022", "Edit"],
+      ["Company F", " ", 0, 0, 0, "Caesar", "Active","04/27/2022", "11868 Idalia Street", "Commerce City", "CO", "80022", "Edit"],
+    ];
+
+
+    return Row(
+      children: [
+        Expanded(
+                    child: ListView.builder(
+                      itemCount: _allCompanies.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return Container(
+                          height: 50,
+                          margin: const EdgeInsets.only(left: 20, right: 20),
+                          color: Colors.white,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.grey),
+                            ),
+                            child: Row(
+                                children: [
+                                  SingleChildScrollView(
+                                    scrollDirection: Axis.horizontal,
+                                   child: Text(
+                                      _allCompanies[index].join(),
+                                      style: const TextStyle(fontSize: 22, color: Colors.black),
+                                    ),
+                                  )
+
+                                ]
+                            )
+                          )
+
+                        );
+                      },
+                    )
+                )
+      ]
     );
   }
-
 }
+

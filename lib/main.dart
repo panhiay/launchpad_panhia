@@ -1,11 +1,11 @@
 //@dart=2.9
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'LoginFlow/routes.dart';
-import 'Navigation/RightNav.dart';
-import 'Navigation/AppBar.dart';
+import 'package:launchpad_tv_panhia/app/LoginFlow/routes.dart';
 import 'Pages/CompanyPage.dart';
-import 'colors/colors.dart';
+import 'app/Navigation/AppBar.dart';
+import 'app/Navigation/RightNav.dart';
+import 'app/colors/colors.dart';
 
 void main() => runApp(const MyApp());
 
@@ -21,8 +21,6 @@ class MyApp extends StatelessWidget {
       initialRoute: SplashRoute,
       routes: routes,
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-      )
     );
   }
 }

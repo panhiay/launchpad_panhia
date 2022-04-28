@@ -1,9 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:launchpad_tv_panhia/Pages/CompanyPage.dart';
-import 'package:launchpad_tv_panhia/services/share_preferences_services.dart';
-import '../LoginFlow/routes.dart';
-import '../colors/colors.dart';
+import 'package:launchpad_tv_panhia/app/colors/colors.dart';
+import 'package:launchpad_tv_panhia/app/globals.dart';
+
 
 
 class HDivider extends StatefulWidget {
@@ -17,12 +16,9 @@ class _HDividerState extends State<HDivider> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: const Divider(
-        color: Colors.white24,
-        height: 25,
-      ),
-
+    return const Divider(
+      color: Colors.white24,
+      height: 25,
     );
   }
 }
@@ -36,13 +32,14 @@ class RightNav extends StatefulWidget {
 
 class _RightNavState extends State<RightNav> {
   String dropdownValue = 'IST';
-  String version = 'v2022.04.06';
+
+
   @override
   Widget build(BuildContext context) {
-    double screenHeight = MediaQuery.of(context).size.height;
-    double screenWidth = MediaQuery.of(context).size.width;
+   double screenHeight = MediaQuery.of(context).size.height;
+   double screenWidth = MediaQuery.of(context).size.width;
 
-    if (screenWidth > 1000.00) {
+    if (screenWidth > expandScreenWidth) {
       return  ExpandedNavi(version);
 
     } else {
@@ -280,18 +277,29 @@ class _ExpandCol extends State<ExpandCol> {
   @override
 
   Widget build(BuildContext context) {
+
+    double screenHeight = MediaQuery.of(context).size.height;
+    double screenWidth = MediaQuery.of(context).size.width;
+
     return ListTile(
-      leading: const Icon(
+
+      leading: IconButton(
+        icon: const Icon(
         Icons.menu,
         size: 25,
-        color: iconColorLight,
+        color: iconColorLight
+        ),
+        highlightColor: Colors.transparent,
+        splashColor: Colors.transparent,
+        onPressed: () {
+          ///****************////
+        },
       ),
       title: Image.asset(
         'logos/caesarsE_logo.png',
         height: 50,
         width: 50,
       ),
-      //onTap: () => {},
     );
   }
 }

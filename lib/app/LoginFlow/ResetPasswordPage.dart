@@ -2,10 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
-import 'package:launchpad_tv_panhia/LoginFlow/LoginPage.dart';
-
-import '../colors/colors.dart';
-import '../services/share_preferences_services.dart';
+import 'package:launchpad_tv_panhia/app/LoginFlow/LoginPage.dart';
+import 'package:launchpad_tv_panhia/app/colors/colors.dart';
+import '../../services/share_preferences_services.dart';
 
 class ResetPasswordPage extends StatefulWidget {
 

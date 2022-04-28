@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:launchpad_tv_panhia/LoginFlow/ResetPasswordPage.dart';
+import 'package:launchpad_tv_panhia/app/LoginFlow/ResetPasswordPage.dart';
 import 'package:launchpad_tv_panhia/services/share_preferences_services.dart';
 import '../colors/colors.dart';
 import 'routes.dart';
